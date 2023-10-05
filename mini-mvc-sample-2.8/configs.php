@@ -1,7 +1,7 @@
 <?php
 
-$DB_SERVER = getenv("MVC_SERVER") ?: "127.0.0.1";
-$DB_DATABASE = getenv("MVC_DB") ?: "NOM-DE-VOTRE-BDD";
+$DB_SERVER = getenv("MVC_SERVER") ?: "localhost";
+$DB_DATABASE = getenv("MVC_DB") ?: "CRM-project1";
 $DB_USER = getenv("MVC_USER") ?: "root";
 $DB_PASSWORD = getenv("MVC_TOKEN") ?: "";
 $DEBUG = getenv("MVC_DEBUG") ?: true;
