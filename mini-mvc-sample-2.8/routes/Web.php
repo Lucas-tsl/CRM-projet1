@@ -19,6 +19,11 @@ class Web
 
         Route::Add('/client/{id}', [$main, 'client']);
 
+        Route::Add('/ficheClient', function()
+        {
+            return Template::render('views/global/ficheClient.php');
+        });
+
         // Appel la fonction inline dans le routeur.
         // Utile pour du code très simple, où un tes, l'utilisation d'un contrôleur est préférable.
         Route::Add('/about', function () {

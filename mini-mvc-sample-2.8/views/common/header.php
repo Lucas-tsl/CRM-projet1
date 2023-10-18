@@ -19,6 +19,7 @@
             }
             ?>
             <li class="nav-item"><a href="./about" class="nav-link">À propos</a></li>
+            <li class="nav-item"><a href="./ficheClient" class="nav-link">Fiche Client</a></li>
         </ul>
     </div>
 </nav>
