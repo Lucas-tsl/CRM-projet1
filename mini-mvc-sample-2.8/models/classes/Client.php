@@ -11,6 +11,7 @@ class Client
     private string $prenom;
     private string $email;
     private string $telephone;
+    private string $createdAt;
     private ProduitsModele $produitModele;
     private AdresseModel $adresseModele;
 

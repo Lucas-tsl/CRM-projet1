@@ -2,27 +2,27 @@
 
 namespace routes;
 
-use controllers\SampleWebController;
-use routes\base\Route;
 use utils\Template;
+use routes\base\Route;
+use controllers\ClientController;
+use controllers\SampleWebController;
 
 class Web
 {
     function __construct()
     {
         $main = new SampleWebController();
+        $client = new ClientController();
+        
 
         // Appel la méthode « home » dans le contrôleur $main.
         Route::Add('/', [$main, 'home']);
         Route::Add('/exemple', [$main, 'exemple']);
         Route::Add('/exemple2/{parametre}', [$main, 'exemple']);
-
-        Route::Add('/client/{id}', [$main, 'client']);
-
-        Route::Add('/ficheClient', function()
-        {
-            return Template::render('views/global/ficheClient.php');
-        });
+        
+        // Clients
+       // Route::Add('/client/{id}', [$client, 'client']);
+        Route::Add('/client/liste', [$client, 'listeClient']);
 
         // Appel la fonction inline dans le routeur.
         // Utile pour du code très simple, où un tes, l'utilisation d'un contrôleur est préférable.
