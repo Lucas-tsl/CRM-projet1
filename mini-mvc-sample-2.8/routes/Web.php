@@ -22,7 +22,13 @@ class Web
         
         // Clients
        // Route::Add('/client/{id}', [$client, 'client']);
-        Route::Add('/client/liste', [$client, 'listeClient']);
+        Route::Add('/liste/ficheClient', [$client, 'listeClient']);
+
+        Route::Add('/liste/client-card/{$id}', [$client, 'fiche']);
+
+        ///Route::Add('/client-card/{$id}', [$client, 'fiche']);
+
+
 
         // Appel la fonction inline dans le routeur.
         // Utile pour du code très simple, où un tes, l'utilisation d'un contrôleur est préférable.

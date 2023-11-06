@@ -13,10 +13,6 @@
                     <button class="btn btn-primary me-md-2" type="button">Creer un client</button>
                 </form>
             </div>
-
-
-            
-
                 <table class="table">
                 <thead class="thead-dark">
                     <tr>
@@ -28,15 +24,26 @@
                 </thead>
                 <tbody>
                 <?php
-                 foreach($clients as $client){
-                    echo "<tr>";
-                    echo "<th scope='row'>" . $client->getId(). "</th>";
-                    echo "<td>" .$client->getPrenom() . " " . $client->getNom(). "</td>" ;
-                    echo "<td>" .$client->getTelephone() ."</td>";
-                    echo "<td>".$client->getEmail() ."</td>";
+                    foreach($clients as $client){
+                        echo "<tr>";
+                        echo "<th scope='row'>" . $client->getId(). "</th>";
+                        echo "<td>" .$client->getPrenom() . " " . $client->getNom(). "</td>" ;
+                        echo "<td>" .$client->getTelephone() ."</td>";
+                        echo "<td>".$client->getEmail() ."</td>";
+                    ?>
+                        <td>
+                            <a href="/client-card<?= $client->getId() ?>" class="btn btn-primary" target="_blank">Voir la fiche</a>
+                        </td>
+                    <?php
+
                     echo "</tr>";
+                    
                  }
+                 
+                 
                  ?>
+
+                 
 
                 </tbody>
                 </table>

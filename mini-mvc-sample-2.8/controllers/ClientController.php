@@ -19,5 +19,13 @@ class ClientController extends WebController
         return Template::render("views/global/liste/ficheClient.php", array("clients" => $clients));
     }
 
+    public function fiche($id)
+    {
+        // À compléter avec les bons appels de méthode.
+        // …
+        $clients = $this->clientModel->getByClientId($id);
+        return Template::render("views/global/liste/client-card.php", array("clients" => $clients));
+    }
+
 
 }
